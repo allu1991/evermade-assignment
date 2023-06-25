@@ -1,3 +1,3 @@
-#Evermade assignment
+# Evermade assignment
 
-Gutenberg assingment for Evermade
+Gutenberg assignment for Evermade
