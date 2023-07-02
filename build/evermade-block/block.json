@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "the-evermade-block/evermade-block",
+  "version": "1.0.0",
+  "title": "Evermade block",
+  "category": "evermade-blocks",
+  "icon": "awards",
+  "description": "Evermade Gutenberg block coding assignment. Displays a grid of selectable articles (posts).",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "wide"
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "wide"
+    ]
+  },
+  "example": {
+    "innerBlocks": [
+      {
+        "name": "evermade-block/evermade-block-item",
+        "attributes": {
+          "title": "Title"
+        },
+        "innerBlocks": [
+          {
+            "name": "core/paragraph",
+            "attributes": {
+              "content": "Lorem ipsum dolor sit amet..."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "textdomain": "evermade-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

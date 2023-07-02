@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "evermade-block/evermade-block-item",
+	"version": "1.0.0",
+	"title": "Evermade block item",
+	"category": "evermade-blocks",
+	"icon": "awards",
+	"description": "Child item for Evermade parent block",
+	"parent": ["evermade-block/evermade-block"],
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "wide"
+		},
+		"selectedPost": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": [ "wide" ]
+	},
+	"example": {},
+	"textdomain": "evermade-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

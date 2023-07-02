@@ -14,16 +14,19 @@
  * @package           the-evermade-block
  */
 
+namespace Evermade\Blocks;
+
+
 /**
- * Registers the block using the metadata loaded from the `block.json` file.
+ * Registers the block(s) using the metadata loaded from the `block.json` file.
  * Behind the scenes, it registers also all assets so they can be enqueued
  * through the block editor in the corresponding context.
- *
- * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-function the_evermade_block_evermade_block_block_init() {
-	register_block_type( __DIR__ . '/build' );
-}
+add_action( 'init', function() {
+	register_block_type( __DIR__ . '/build/evermade-block' );
+	register_block_type( __DIR__ . '/build/evermade-block-item' );
+} );
+
 
 // Add new custom gutenberg block category
 add_filter('block_categories_all', function($categories, $post) {
@@ -37,4 +40,8 @@ add_filter('block_categories_all', function($categories, $post) {
 	return $categories;
 }, 10, 2);
 
-add_action( 'init', 'the_evermade_block_evermade_block_block_init' );
+
+// Enqueue the block styles for the front end
+add_action( 'wp_enqueue_scripts', function() {
+	wp_enqueue_style( 'evermade-styles', plugin_dir_url( __FILE__ ) . 'build/evermade-block/style-index.css' );
+} );
