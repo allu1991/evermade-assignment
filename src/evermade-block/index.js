@@ -25,7 +25,7 @@ registerBlockType( metadata, {
 
 		return (
 			<div { ...blockProps }>
-				<h2 class="posts-grid-header">{ __( 'Evermade article grid', 'evermade-block' ) }</h2>
+				<h2 className="posts-grid-header">{ __( 'Evermade article grid', 'evermade-block' ) }</h2>
 				<div { ...innerBlocksProps } />
 			</div>
 		)

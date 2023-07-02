@@ -46,7 +46,7 @@ __webpack_require__.r(__webpack_exports__);
     return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       ...blockProps
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", {
-      class: "posts-grid-header"
+      className: "posts-grid-header"
     }, (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Evermade article grid', 'evermade-block')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       ...innerBlocksProps
     }));

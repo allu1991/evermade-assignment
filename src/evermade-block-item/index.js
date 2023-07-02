@@ -77,7 +77,7 @@ registerBlockType( metadata, {
 						{ /* Display the post content if one has been selected */ }
 						{ currentValidPost ? (
 							<>
-								<div class="post-item-thumbnail">
+								<div className="post-item-thumbnail">
 									{ currentValidPost._embedded[ "wp:featuredmedia" ] ? (
 										<img src={ currentValidPost._embedded[ "wp:featuredmedia" ][ 0 ].media_details.sizes.medium.source_url } alt={ currentValidPost._embedded[ "wp:featuredmedia" ][ 0 ].alt_text } />
 									) : (
@@ -85,21 +85,21 @@ registerBlockType( metadata, {
 									) }
 								</div>
 
-								<div class="post-item-info">
-									<div class="post-item-title-and-date">
+								<div className="post-item-info">
+									<div className="post-item-title-and-date">
 										<h3>{ currentValidPost.title.rendered }</h3>
 										<time>{ currentValidPost.date }</time>
 									</div>
 
 									{/* Check whether post has a category */}
 									{ currentValidPost._embedded[ "wp:term" ] && currentValidPost._embedded[ "wp:term" ][ 0 ][ 0 ].name !== "Uncategorized" && (
-										<p class="post-item-category">{ currentValidPost._embedded[ "wp:term" ][ 0 ][ 0 ].name }</p>
+										<p className="post-item-category">{ currentValidPost._embedded[ "wp:term" ][ 0 ][ 0 ].name }</p>
 									)}
 									
 								</div>
 							</>
 						) : (
-							<p class="post-select-instruction">Select a post to be displayed here</p>
+							<p className="post-select-instruction">Select a post to be displayed here</p>
 						) }
 					</>
 				}

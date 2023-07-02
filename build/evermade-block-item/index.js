@@ -233,18 +233,18 @@ __webpack_require__.r(__webpack_exports__);
       },
       value: selectedPost
     }), currentValidPost ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      class: "post-item-thumbnail"
+      className: "post-item-thumbnail"
     }, currentValidPost._embedded["wp:featuredmedia"] ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
       src: currentValidPost._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url,
       alt: currentValidPost._embedded["wp:featuredmedia"][0].alt_text
     }) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "(no post thumbnail)")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      class: "post-item-info"
+      className: "post-item-info"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      class: "post-item-title-and-date"
+      className: "post-item-title-and-date"
     }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, currentValidPost.title.rendered), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("time", null, currentValidPost.date)), currentValidPost._embedded["wp:term"] && currentValidPost._embedded["wp:term"][0][0].name !== "Uncategorized" && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-      class: "post-item-category"
+      className: "post-item-category"
     }, currentValidPost._embedded["wp:term"][0][0].name))) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-      class: "post-select-instruction"
+      className: "post-select-instruction"
     }, "Select a post to be displayed here")));
   },
   save: ({
