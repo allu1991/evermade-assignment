@@ -79,7 +79,10 @@ registerBlockType( metadata, {
 							<>
 								<div className="post-item-thumbnail">
 									{ currentValidPost._embedded[ "wp:featuredmedia" ] ? (
-										<img src={ currentValidPost._embedded[ "wp:featuredmedia" ][ 0 ].media_details.sizes.medium.source_url } alt={ currentValidPost._embedded[ "wp:featuredmedia" ][ 0 ].alt_text } />
+										// Use medium-sized preview image if available. Otherwise use the thumbnail
+										<img src={ 
+											currentValidPost._embedded[ "wp:featuredmedia" ][ 0 ].media_details.sizes.medium ? currentValidPost._embedded[ "wp:featuredmedia" ][ 0 ].media_details.sizes.medium.source_url : 
+											currentValidPost._embedded[ "wp:featuredmedia" ][ 0 ].media_details.sizes.thumbnail.source_url } alt={ currentValidPost._embedded[ "wp:featuredmedia" ][ 0 ].alt_text } />
 									) : (
 										<p>(no post thumbnail)</p>
 									) }

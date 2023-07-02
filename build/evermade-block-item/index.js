@@ -234,8 +234,10 @@ __webpack_require__.r(__webpack_exports__);
       value: selectedPost
     }), currentValidPost ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: "post-item-thumbnail"
-    }, currentValidPost._embedded["wp:featuredmedia"] ? (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
-      src: currentValidPost._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url,
+    }, currentValidPost._embedded["wp:featuredmedia"] ?
+    // Use medium-sized preview image if available. Otherwise use the thumbnail
+    (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
+      src: currentValidPost._embedded["wp:featuredmedia"][0].media_details.sizes.medium ? currentValidPost._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url : currentValidPost._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url,
       alt: currentValidPost._embedded["wp:featuredmedia"][0].alt_text
     }) : (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "(no post thumbnail)")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
       className: "post-item-info"
